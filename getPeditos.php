@@ -1,11 +1,11 @@
 <?php
 //1. Incluimos la base de datos
 include('conexion.php');
-//3. Realizamos la consulta
-$sentencia = $conexion->prepare("SELECT * FROM categoria");
+//2. Realizamos la consulta
+$sentencia = $conexion->prepare("SELECT * FROM pedido");
 $sentencia->execute();
 $resultado = $sentencia->fetchAll(PDO::FETCH_ASSOC);
-//3.1. Imprimimos el resultado
+//IMPRIMIMOS
 print_r(json_encode($resultado));
 
 ?>

@@ -12,7 +12,7 @@ if(!isset($_POST['id'])){
 //2.1. Traemos los campos
 $id = $_POST['id'];
 //3.  Consulta
-$sentencia = $conexion->prepare("SELECT  nombre, precio_venta, descripcion FROM producto WHERE id_categoria = ?;");
+$sentencia = $conexion->prepare("SELECT  * FROM producto WHERE id_categoria = ?;");
 $sentencia->execute([$id]);
 //4.  Traemos los datos
 $arr = array();
